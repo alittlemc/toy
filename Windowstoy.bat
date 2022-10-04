@@ -1,36 +1,36 @@
 @echo off
-echo %~0 by alittlemc;version 1.0;updatetime 2022-10-04 Îç
+echo %~0 by alittlemc;version v1.0;updatetime 2022-10-04
 echo hostname %COMPUTERNAME%;user %USERNAME%
 :start0
 echo ----------====start====----------
 echo		ID	NOTES
-echo 	00	ÍË³ö
-echo 	0	ÇĞ»»µ½administratorÖ´ĞĞ
-echo 	 0a	ÇĞ»»µ½Ö¸¶¨ÓÃ»§Ö´ĞĞ
-echo 	1	ÖØÖÃÍøÂçÉèÖÃ
-echo 	2	ĞŞ¸´ÊäÈë·¨
-echo 	3	Çå¿Õ»ØÊÕÕ¾
-echo 	4	ÅúÁ¿°²×°%~dp0Ä¿Â¼ÏÂÈ«²¿*.msu,*.msi,*.exe¿ÉÖ´ĞĞÎÄ¼ş
-echo 	5	ÖØÃü¼ÆËã»úÃû×Ö
-echo 	6	ĞÂµçÄÔÉèÖÃÓò
-echo 	 6a	ÀÏµçÄÔĞŞ¸ÄÓò
+echo 	00	é€€å‡º
+echo 	0	åˆ‡æ¢åˆ°administratoræ‰§è¡Œ
+echo 	 0a	åˆ‡æ¢åˆ°æŒ‡å®šç”¨æˆ·æ‰§è¡Œ
+echo 	1	é‡ç½®ç½‘ç»œè®¾ç½®
+echo 	2	ä¿®å¤è¾“å…¥æ³•
+echo 	3	æ¸…ç©ºå›æ”¶ç«™
+echo 	4	æ‰¹é‡å®‰è£…%~dp0ç›®å½•ä¸‹å…¨éƒ¨*.msu,*.msi,*.exeå¯æ‰§è¡Œæ–‡ä»¶
+echo 	5	é‡å‘½è®¡ç®—æœºåå­—
+echo 	6	æ–°ç”µè„‘è®¾ç½®åŸŸ
+echo 	 6a	è€ç”µè„‘ä¿®æ”¹åŸŸ
 echo.
-set dev=Éè±¸¹ÜÀíÆ÷(devmgmt.msc)
-set reg=×¢²á±í(regedit)
-set dco=ÏµÍ³×é¼ş(dcomcnfg)
-set com=¼ÆËã»ú¹ÜÀí(compmgmt.msc)
-set mst=Ô¶³Ì×ÀÃæ(mstsc)
-set cle=´ÅÅÌÇåÀí(cleanmgr)
-set lus=±¾»úÓÃ»§/×é(lusrmgr.msc)
-set osk=ÆÁÄ»¼üÅÌ(osk)
-set info=ÏÔÊ¾ÏµÍ³ĞÅÏ¢
-set win=¼ì²éWindowsÏµÍ³(winver)
-set fsm=¹²ÏíÎÄ¼ş¼Ğ¹ÜÀí(fsmgmt.msc)
-set gpe=×é²ßÂÔ(gpedit.msc)
-set uti=¸¨Öú¹¦ÄÜ(utilman)
-set off=×¢Ïú(logoff)
+set dev=è®¾å¤‡ç®¡ç†å™¨(devmgmt.msc)
+set reg=æ³¨å†Œè¡¨(regedit)
+set dco=ç³»ç»Ÿç»„ä»¶(dcomcnfg)
+set com=è®¡ç®—æœºç®¡ç†(compmgmt.msc)
+set mst=è¿œç¨‹æ¡Œé¢(mstsc)
+set cle=ç£ç›˜æ¸…ç†(cleanmgr)
+set lus=æœ¬æœºç”¨æˆ·/ç»„(lusrmgr.msc)
+set osk=å±å¹•é”®ç›˜(osk)
+set info=æ˜¾ç¤ºç³»ç»Ÿä¿¡æ¯
+set win=æ£€æŸ¥Windowsç³»ç»Ÿ(winver)
+set fsm=å…±äº«æ–‡ä»¶å¤¹ç®¡ç†(fsmgmt.msc)
+set gpe=ç»„ç­–ç•¥(gpedit.msc)
+set uti=è¾…åŠ©åŠŸèƒ½(utilman)
+set off=æ³¨é”€(logoff)
 
-echo 		=ÆäËû=
+echo 		=å…¶ä»–=
 echo 	01	%dev%
 echo 	02	%reg%
 echo 	03	%dco%
@@ -45,12 +45,12 @@ echo 	11	%gpe%
 echo 	12	%uti%
 echo 	off	%off%
 echo 	info	%info%
-::echo systemreset ÖØÖÃWindows
-::echo systemreset-cleanpc ¸üĞÂ²¢ÖØÖÃWindows
+::echo systemreset é‡ç½®Windows
+::echo systemreset-cleanpc æ›´æ–°å¹¶é‡ç½®Windows
 echo.
 
-set /p sr=ÇëÊäÈëĞèÒªµÄ¹¦ÄÜID:
-goto %sr% 2>nul||echo Î´Æ¥Åäµ½µÄID&%~0%&pause>nul
+set /p sr=è¯·è¾“å…¥éœ€è¦çš„åŠŸèƒ½ID:
+goto %sr% 2>nul||echo æœªåŒ¹é…åˆ°çš„ID&%~0%&pause>nul
 
 :0
 	echo get administrator
@@ -59,7 +59,7 @@ goto %sr% 2>nul||echo Î´Æ¥Åäµ½µÄID&%~0%&pause>nul
 goto start
 
 :0a
-	set /p user=ÊäÈëÓÃ»§Ãû:
+	set /p user=è¾“å…¥ç”¨æˆ·å:
 	echo change %user%
 	net user  %user% /active:yes
 	echo %user%
@@ -70,65 +70,65 @@ goto start
 goto start
 
 :1
-	echo ÖØÖÃÍøÂçÉèÖÃ(netsh winsock reset)
+	echo é‡ç½®ç½‘ç»œè®¾ç½®(netsh winsock reset)
 	set y=<nul
-	set /p y=È·ÈÏÖØÖÃÍøÂç?(y/n)
+	set /p y=ç¡®è®¤é‡ç½®ç½‘ç»œ?(y/n)
 	if %y%==y (netsh winsock reset)
 	set y=<nul
 goto start
 
 :2
-	echo ĞŞ¸´ÊäÈë·¨(ctfmon)
+	echo ä¿®å¤è¾“å…¥æ³•(ctfmon)
 	ctfmon
 goto start
 
 :3
-	echo Çå¿Õ»ØÊÕÕ¾
+	echo æ¸…ç©ºå›æ”¶ç«™
 	set y=<nul
-	set /p y=È·ÈÏÇå¿Õ»ØÊÕÕ¾?(y/n):
+	set /p y=ç¡®è®¤æ¸…ç©ºå›æ”¶ç«™?(y/n):
 if %y%==y (
-::Çå¿ÕWin7/Win8»ØÊÕÕ¾
+::æ¸…ç©ºWin7/Win8å›æ”¶ç«™
 for %%a in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 if exist %%a: (
 del /f /s /q "%%a:$recycle.bin*.*" >nul 2>nul
 )
 )
-::Çå¿ÕXP»ØÊÕÕ¾
+::æ¸…ç©ºXPå›æ”¶ç«™
 del /f /s /q "%systemdrive%
 ecycled*.*" >nul 2>nul
-echo Çå¿Õ»ØÊÕÕ¾Íê³É£¡
+echo æ¸…ç©ºå›æ”¶ç«™å®Œæˆï¼
 ) else (echo no)
 set y=<nul
 goto start
 
 :4
 	setlocal enabledelayedexpansion
-	echo ÅúÁ¿°²×°
+	echo æ‰¹é‡å®‰è£…
 	set y=<nul
-	set /p "y=°²×°µ±Ç°Ä¿Â¼ÖĞ¿ÉÖ´ĞĞ³ÌĞò?(y/n)"
+	set /p "y=å®‰è£…å½“å‰ç›®å½•ä¸­å¯æ‰§è¡Œç¨‹åº?(y/n)"
 	for %%f in (*.msu,*.msi,*.exe) do ( start /wait %%f )
-::×ÓÄ¿Â¼Ò²°²×°/R Ä¬ÈÏ°²×°/s		
+::å­ç›®å½•ä¹Ÿå®‰è£…/R é»˜è®¤å®‰è£…/s		
 	set y=<nul
 goto start
 
 :5
 	:rename
 	set y=<nul
-	echo µ±Ç°µÄÖ÷»úÃû:%COMPUTERNAME%
-	set /p id=ÇëÊäÈëĞÂÖ÷»úÃû:
-	set /p y=È·ÈÏ½«%COMPUTERNAME%ĞŞ¸ÄÎª%id%?(y/n/r)
+	echo å½“å‰çš„ä¸»æœºå:%COMPUTERNAME%
+	set /p id=è¯·è¾“å…¥æ–°ä¸»æœºå:
+	set /p y=ç¡®è®¤å°†%COMPUTERNAME%ä¿®æ”¹ä¸º%id%?(y/n/r)
 	if %y%==r (goto rename)
 	if %y%==y (netdom.exe renamecomputer %COMPUTERNAME% /newname: %id%)
-	echo µ±Ç°µÄÖ÷»úÃû:%COMPUTERNAME%
+	echo å½“å‰çš„ä¸»æœºå:%COMPUTERNAME%
 goto start
 
 :6
 	:redomain
-	set /p domain=ÇëÊäÈëADÓòÃû:
-	set /p y=È·ÈÏ½«Óò¸üĞÂÎª%domain%?(y/n/r)
+	set /p domain=è¯·è¾“å…¥ADåŸŸå:
+	set /p y=ç¡®è®¤å°†åŸŸæ›´æ–°ä¸º%domain%?(y/n/r)
 	if %y%==r (goto redomain)
 	if %y%==y (netdom join %COMPUTERNAME% /DOMAIN:%domain%)
-::/UserD:%user%£¨ÓÃ»§ÕÊºÅ£© /PasswordD:%passwd%£¨ÓÃ»§ÃÜÂë£©
+::/UserD:%user%ï¼ˆç”¨æˆ·å¸å·ï¼‰ /PasswordD:%passwd%ï¼ˆç”¨æˆ·å¯†ç ï¼‰
 
 goto start
 
@@ -154,7 +154,7 @@ goto start
 	wmic ntdomain get caption,dnsforestname,domaincontrolleraddress,domaincontrollername,status
 goto start
 
-::ÆäËû
+::å…¶ä»–
 
 :01
 echo %dev%
@@ -218,7 +218,7 @@ goto start
 
 :off
 	set y=<nul
-	set /p y=È·ÈÏ×¢Ïú?(y/n):
+	set /p y=ç¡®è®¤æ³¨é”€?(y/n):
 	if %y%==y (logoff)
 	set y=<nul
 goto start
