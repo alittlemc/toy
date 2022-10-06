@@ -1,5 +1,11 @@
 @echo off
-echo %~0 by alittlemc;
+@REM setlocal enabledelayedexpansion
+@REM if not "%*"=="" (
+@REM     set "sr=%*"
+@REM     echo "%sr%"
+@REM     echo "%sr:~,1%"|findstr "[0-9]" >nul 2>nul && goto dobat || goto docmd
+@REM     )
+echo %~0 by alittlemc;%~0
 echo version 1.1;updatetime 2022-10-06 午
 echo hostname %COMPUTERNAME%;user %USERNAME%
 :0
@@ -9,7 +15,7 @@ echo    ID    NOTES
 echo     0      显示提示
 echo     00     退出
 echo     1      切换到administrator执行
-echo      a1    切换到指定用户执行
+echo      1a    切换到指定用户执行
 echo     2      重置网络设置
 echo     3      修复输入法
 echo     4      联网同步系统时间
@@ -55,13 +61,16 @@ goto start
 
 :start0
 ::echo 可以输入cmd命令也可以输入功能ID
-set /p sr=%~dp0#
-@REM 数字开头就是功能id,否则是cmd命令
-echo %sr:~,1%|findstr /i "[a-z]" >nul 2>nul && goto docmd || goto dobat
+@REM setlocal enabledelayedexpansion
+set /p "sr=%~dp0#"
+::数字开头就是功能id,否则是cmd命令
+::echo input %sr%
+echo %sr:~,1%|findstr "[0-9]" >nul 2>nul && goto dobat || goto docmd
+::echo findstr来打印sr第一位是含0-9，当出错&&后就不执行,无论是否出错docmd都执行
 pause>nul
 
 :dobat
-echo dobat
+echo Do bat
 goto %sr% 2>nul||echo 未匹配到的ID&%~0%&pause>nul
 pause>nul
 
@@ -110,7 +119,6 @@ goto start
 goto start
 
 :5
-    setlocal enabledelayedexpansion
     echo 批量安装
     set y=<nul
     set /p "y=安装当前目录中可执行程序?(y/n)"
@@ -231,13 +239,14 @@ goto start
 goto start
 
 :start
+::if not "%~1"=="" ( 
+::     pause>nul )
 echo -----------====end====-----------
 goto start0
 
 :docmd
-echo CMD 命令
+echo Do cmd
 %sr%
-@REM TIMEOUT /T 10
 goto start
 
 pause>nul
