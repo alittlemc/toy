@@ -1,5 +1,5 @@
-﻿@echo off
-echo alittlemc 杨泽澳
+@echo off
+echo alittlemc
 doskey ls=dir /b $*
 doskey ll=dir /ONE $*
 doskey cat=type $*
@@ -15,4 +15,11 @@ doskey ifconfig=ipconfig $*
 doskey shell=PowerShell $*
 doskey history=doskey  /history
 doskey alias=doskey /macros
+::git相关
+doskey g=git
+doskey ga=git add
+doskey gaa=git add --all
+doskey gc=git commit
+doskey gr=git remove
+doskey gup=git pull
 echo 别名完成载入，键入alias查看
