@@ -1,18 +1,31 @@
 # Toy
-博客园地址[alittlemc](https://www.cnblogs.com/alittlemc/p/16753896.html)
+
+博客园介绍地址[alittlemc](https://www.cnblogs.com/alittlemc/p/16753896.html)
+
 编写些脚本将运维经常所用到小玩意所集成在一起
 toy有玩具的意思，我觉得这些脚本都不是很高大上的玩意，只不过方便我完成些太重复繁琐的过程。
 在工作的过程中发现有一些事情其实完全可以使用脚本来实现，方便在以后运维时候，拿着U盘然后快速的完成维护的工作，提供工作效率。
 以后的计划：
+
 * Windows Bat版本（初步完成）
 * Linux Shell版本（在mac os也可用）（新建文件夹）
 
-# WindowsToy v1.0
+git网页：
+
+* [alittlemc/toy (github.com)](https://github.com/alittlemc/toy)
+
+* [alittlemc/Toy(gitee.com)](https://gitee.com/alittlemc/toy)
+
+# WindowsToy.bat v1.1
+
 ## 大概介绍
+
 使用bat编写
 之前使用if else语句来生成全部，发现经常有bug，干脆就使用编程的流氓goto来实现，目前使用goto来实现，效果类似于switch case的效果。
 话说bat真的无语啊，经常有错的地方，比如for内的需要括号转义，bat相比于python、lua之类的脚本语言不适合作为开发，但是奈何目前我们遇到的大部分桌面运维都是接触到Windows的多，使用bat直接可以用，不需要配置安装python、lua的解释环境，所以嘛，先忍忍。
+
 ## 更新了
+
 * v1.0->2022年10月4日15:33:18
   * 基础的完成大致框架的功能
     * 重置网络
@@ -29,9 +42,12 @@ toy有玩具的意思，我觉得这些脚本都不是很高大上的玩意，�
   * 新增
     * 同步时间的功能
   * **现在可以在批处理的终端上也输入cmd命令**
-![图1](https://img2022.cnblogs.com/blog/2928139/202210/2928139-20221006162504104-705429312.png)
+    ![图1](https://img2022.cnblogs.com/blog/2928139/202210/2928139-20221006162504104-705429312.png)
+
 ## 目前的功能
+
 现在还是有蛮多的bug，欢迎各位大佬一起来交流！
+
 ``` bash
 E:\Project\bat\WindowsToy.bat by alittlemc;
 version 1.1;updatetime 2022-10-06 午
@@ -41,7 +57,7 @@ hostname ALITTLEMC;user alittlemc
     0      显示提示
     00     退出
     1      切换到administrator执行
-     a1    切换到指定用户执行
+     1a    切换到指定用户执行
     2      重置网络设置
     3      修复输入法
     4      联网同步系统时间
@@ -66,3 +82,10 @@ hostname ALITTLEMC;user alittlemc
     0b     显示系统信息
 -----------====end====-----------
 ```
+
+# alias.bat
+
+这个其实就很简单的[在cmd中使用doskey来实现alias别名功能](https://www.cnblogs.com/alittlemc/p/16627210.html)
+
+哈哈，为了让我在Windows也可以使用类似于ifconfig、traceroute等Linux的命令拼写。
+
